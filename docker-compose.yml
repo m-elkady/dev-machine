@@ -11,11 +11,21 @@ services:
             - "80:80"
             - "443:443"
         restart: unless-stopped
-        depends_on:
-            - php5.6
-            - php7.2
-            - mysql
-    php7.2:
+
+#    apache:
+#        build: ./apache/
+#        container_name: apache
+#        depends_on:
+#            - php
+#            - mysql
+#        ports:
+#            - "80:80"
+#            - "443:443"
+#        restart: always
+#        volumes:
+#            - "./../:/var/www/html"
+
+    php:
         container_name: php7.2
         build:
             context: ./php/

@@ -26,19 +26,10 @@ services:
 #            - "./../:/var/www/html"
 
     php:
-        container_name: php7.2
+        container_name: php7.3
         build:
             context: ./php/
-            dockerfile: Dockerfile-7.2
-        restart: always
-        volumes:
-            - "./../:/var/www/html"
-
-    php5.6:
-        container_name: php5.6
-        build:
-            context: ./php/
-            dockerfile: Dockerfile
+            dockerfile: Dockerfile-7.3
         restart: always
         volumes:
             - "./../:/var/www/html"
